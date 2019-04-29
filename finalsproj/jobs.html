@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Hogwarts Orientation</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="javajam.css">
+
+
+<script type="text/javascript">
+function  func()
+{
+	var epattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$";
+	var name=document.getElementById("myName").value;
+	var mail=document.getElementById("myEmail").value;
+	var exp=document.getElementById("myExperience").value;
+	if(name=="")
+	{
+		alert('Please Enter Name');
+		return false;
+	}
+	else if(mail==""||!(mail.match(epattern)))
+	{
+		alert('Please Enter valid email');
+		return false;
+	}
+	else if(exp=="")
+	{
+		alert('Please Enter Experience');
+		return false;
+	}
+	return true;
+}
+</script>	
+</head>
+<body>
+<div id="wrapper">
+<header>
+	<h1>Hogwarts Orientation</h1>
+</header>
+<nav>
+	<ul>
+	
+	<li><a href="home.html">Home</a></li>
+	<li><a href="menu.html">Houses</a></li>
+	<li><a href="music.html">Alumni</a></li>
+	<li><a href="jobs.html">Apply</a></li>
+
+<li><a href="jobs.html">Quidditch</a></li>
+<li><a href="jobs.html">Yule Ball</a></li>
+<li><a href="jobs.html">House Cup</a></li>
+	</ul>
+</nav>
+<main>
+	<h2>Think you have what it takes to be a witch or wizard?</h2>
+	<p> Please fill out your name to be considered. We will send you the acceptance letter via our owls if you are deemed fit for Hogwarts School of Magic: </p>
+	<form method="post" action="http://ajinkyaghadge.net/formhandle.php" onsubmit="return func()">
+					<label for="myName">Name:</label><br><br>
+                    <dd><input type="text" id="myName" name="myName"></dd>
+             
+                    
+                    <input type="submit" value="Apply Now" id="mySubmit" />
+	</form>
+</main>
+	<footer>Copyright &copy; 2018 Hogwarts Orientation for Muggles <br>
+	<i><a href="mailto:rkolli@purdue”>rkolli@purdue</a></i>
+	</footer>
+</div>
+</body>
+</html>
